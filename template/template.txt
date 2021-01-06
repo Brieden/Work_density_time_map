@@ -1,0 +1,99 @@
+residential: 
+  properties:
+    title: Residential Map
+    description: Anzahl Einwohner je Hektar (100m x 100m)
+    environment:
+      DEBUG: true
+  pipeline:
+    - run: load
+      parameters:
+        from: {{ path_to_input }}
+        format: csv
+        header: {{ number_col }} 
+    - flow: flows.residential
+    - flow: flows.styling
+    - run: update_package
+      parameters:
+        name: residential-map 
+        author: {{ author_name }}
+        title: Residential Map
+        description: The Number of Residents per Hectar
+        version: 1.0.0
+        datapackage_version: 1.0.0
+        gemeindescan_version: 0.3.1
+        gemeindescan_meta:
+          topic: ""
+          permission: NOT_LISTED
+          is_showcase: false
+          bfs_number: 1051
+        format: geojson
+        feature:
+        license: ODC-By-1.0
+        licenses:
+          -
+            url: "https://opendatacommons.org/licenses/by/1.0/"
+            type: ODC-By-1.0
+        keywords:
+          -  "one keyword"
+          -  "second keyword"
+        views:
+          -
+            name: mapview
+            specType: gemeindescanSnapshot
+            spec:
+              title: Residential Map
+              description: The Numer of Residents per Hectar
+              attribution: ""
+              bounds: {{ bounds_to_have }}
+              legend: 
+                -
+                 shape: "circle"
+                 size: 1
+                 fillColor: "#52717e"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0
+                 label: '1-200'
+                 primary: false 
+                -
+                 shape: "circle"
+                 size: 1
+                 fillColor: "#52717e"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0 
+                 label: '> 200'
+                 primary: false 
+              resources: ["data-layer", "mapbox-background"]
+        sources:
+          -
+            url: "https://www.openstreetmap.org/copyright"
+            title: "Karte: Mapbox, © OpenStreetMap"
+        resources:
+          -
+            name: mapbox-background
+            path: "mapbox://styles/gemeindescan/ck6rp249516tg1iqkmt48o4pz"
+            mediatype: "application/vnd.mapbox-vector-tile"
+            data:
+          -
+            name: "data-layer"
+            mediatype: "application/geo+json"
+            data:
+                name: "data"
+                type: "FeatureCollection"
+                features: 
+        maintainers:
+          -
+            web:  "{{ web_maintainer }}"
+            name: "{{ name_maintainer }}"
+        contributors:
+          -
+            web: "https://cividi.ch"
+            role: "publisher"
+            email: "info@cividi.ch"
+            title: "cividi"
+    - run: dump_to_path
+      parameters:
+        out-path: {{ path_to_output }}

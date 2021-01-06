@@ -1,0 +1,7 @@
+path_to_input: input/clear_result.csv
+author_name: Karolina Bzdusek <karolina@cividi.ch>
+bounds_to_have: ["geo:47.128114,8.332397", "geo:47.492547,8.766038"]
+web_maintainer: 
+name_maintainer: 
+number_col: 10 
+path_to_output: output/ZHR

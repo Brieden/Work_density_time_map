@@ -1,0 +1,14 @@
+resources:
+  -
+    name: "mapbox-background"
+    path: "mapbox://styles/gemeindescan/ck6rp249516tg1iqkmt48o4pz"
+    mediatype: "application/vnd.mapbox-vector-tile"
+    data:
+  -
+    name: "data-layer"
+    mediatype: "application/geo+json"
+    data:
+        name: "data"
+        type: "FeatureCollection"
+        features:
+
