@@ -7,9 +7,9 @@ residential_diversity:
   pipeline:
     - run: load
       parameters:
-        from: {{ path_to_input }}
+        from: input/clear_result.csv
         format: csv
-        header: {{ number_col }} 
+        header: 10 
     - run: add_computed_field
       parameters:
         fields:
@@ -23,10 +23,11 @@ residential_diversity:
               - WT4
               - WT5
               - WT6
+    - flow: flows.apartments
     - run: update_package
       parameters:
         name: residential-diversity-map 
-        author: {{ author_name }}
+        author: Karolina Bzdusek <karolina@cividi.ch>
         title: Residential Map
         description: The Highest Number of X-bedroom Aparment per Hectar
         version: 1.0.0
@@ -55,7 +56,7 @@ residential_diversity:
               title: Residential Diversity Map
               description: The Highest Number of X-bedroom per Hectar
               attribution: ""
-              bounds: {{ bounds_to_have }}
+              bounds: ['geo:47.128114,8.332397', 'geo:47.492547,8.766038']
               legend: 
                 -
                  shape: "circle"
@@ -137,8 +138,8 @@ residential_diversity:
                 features: 
         maintainers:
           -
-            web:  "{{ web_maintainer }}"
-            name: "{{ name_maintainer }}"
+            web:  "None"
+            name: "None"
         contributors:
           -
             web: "https://cividi.ch"
@@ -147,4 +148,4 @@ residential_diversity:
             title: "cividi"
     - run: dump_to_path
       parameters:
-        out-path: {{ path_to_output }}
+        out-path: output/ZHR

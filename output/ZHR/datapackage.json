@@ -1,0 +1,228 @@
+{
+  "author": "Karolina Bzdusek <karolina@cividi.ch>",
+  "bytes": 259406,
+  "contributors": [
+    {
+      "email": "info@cividi.ch",
+      "role": "publisher",
+      "title": "cividi",
+      "web": "https://cividi.ch"
+    }
+  ],
+  "count_of_rows": 4066,
+  "datapackage_version": "1.0.0",
+  "description": "The Highest Number of X-bedroom Aparment per Hectar",
+  "feature": null,
+  "format": "geojson",
+  "gemeindescan_meta": {
+    "bfs_number": 1051,
+    "is_showcase": false,
+    "permission": "NOT_LISTED",
+    "topic": ""
+  },
+  "gemeindescan_version": "0.3.1",
+  "hash": "2b1bb5077d8b8e82d8de953dabf47718",
+  "keywords": [
+    "one keyword",
+    "second keyword"
+  ],
+  "license": "ODC-By-1.0",
+  "licenses": [
+    {
+      "type": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "None",
+      "web": "None"
+    }
+  ],
+  "name": "residential-diversity-map",
+  "profile": "data-package",
+  "resources": [
+    {
+      "bytes": 259406,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "input/clear_result.csv",
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "dfc03624c49a54d8371767717c05ebec",
+      "name": "clear_result",
+      "path": "clear_result.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "BTOT",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "yr",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "RELI",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "wkt",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "WT1",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "WT2",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "WT3",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "WT4",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "WT5",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "WT6",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "max_number",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "Category",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Karte: Mapbox, © OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright"
+    }
+  ],
+  "title": "Residential Map",
+  "version": "1.0.0",
+  "views": [
+    {
+      "name": "mapview",
+      "spec": {
+        "attribution": "",
+        "bounds": [
+          "geo:47.128114,8.332397",
+          "geo:47.492547,8.766038"
+        ],
+        "description": "The Highest Number of X-bedroom per Hectar",
+        "legend": [
+          {
+            "fillColor": "#52717e",
+            "fillOpacity": 0.18,
+            "label": "WT1",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#f30000",
+            "fillOpacity": 0.18,
+            "label": "WT2",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#f97a00",
+            "fillOpacity": 0.18,
+            "label": "WT3",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#ffff00",
+            "fillOpacity": 0.18,
+            "label": "WT4",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#82ff05",
+            "fillOpacity": 0.18,
+            "label": "WT5",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#05ff09",
+            "fillOpacity": 0.18,
+            "label": "WT6",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          }
+        ],
+        "resources": [
+          "data-layer",
+          "mapbox-background"
+        ],
+        "title": "Residential Diversity Map"
+      },
+      "specType": "gemeindescanSnapshot"
+    }
+  ]
+}
