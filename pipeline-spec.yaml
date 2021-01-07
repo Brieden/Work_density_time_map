@@ -24,6 +24,7 @@ residential_diversity:
               - WT5
               - WT6
     - flow: flows.apartments
+    - flow: flows.styling
     - run: update_package
       parameters:
         name: residential-diversity-map 

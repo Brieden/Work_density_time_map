@@ -1,6 +1,6 @@
 {
   "author": "Karolina Bzdusek <karolina@cividi.ch>",
-  "bytes": 259406,
+  "bytes": 434306,
   "contributors": [
     {
       "email": "info@cividi.ch",
@@ -21,7 +21,7 @@
     "topic": ""
   },
   "gemeindescan_version": "0.3.1",
-  "hash": "2b1bb5077d8b8e82d8de953dabf47718",
+  "hash": "51e2a33a587e4038465b547f991add40",
   "keywords": [
     "one keyword",
     "second keyword"
@@ -43,7 +43,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 259406,
+      "bytes": 434306,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -57,7 +57,7 @@
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "dfc03624c49a54d8371767717c05ebec",
+      "hash": "4ae93cea0c61e14ca898c919b5236470",
       "name": "clear_result",
       "path": "clear_result.csv",
       "profile": "tabular-data-resource",
@@ -122,6 +122,48 @@
             "format": "default",
             "name": "Category",
             "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "fill",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "fillColor",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "fillOpacity",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "stroke",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "opacity",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "weight",
+            "type": "string"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "radius",
+            "type": "number"
           }
         ],
         "missingValues": [
