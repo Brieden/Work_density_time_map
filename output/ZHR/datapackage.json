@@ -21,7 +21,7 @@
     "topic": ""
   },
   "gemeindescan_version": "0.3.1",
-  "hash": "51e2a33a587e4038465b547f991add40",
+  "hash": "08abff3a2c2aae92c370d57389098731",
   "keywords": [
     "one keyword",
     "second keyword"
@@ -57,7 +57,7 @@
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "4ae93cea0c61e14ca898c919b5236470",
+      "hash": "fa3228dd3b28ab40c804123174f4e183",
       "name": "clear_result",
       "path": "clear_result.csv",
       "profile": "tabular-data-resource",

@@ -1,8 +1,8 @@
 .ipynb_checkpoints
 .dpp
-.input/*
-.output/*
-.output/*/*
-.__pycache__
-.flows/__pycache__
-
+input/*
+output/*
+output/*/*
+__pycache__
+flows/__pycache__
+flows/__pycache__/*
