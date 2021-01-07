@@ -12,21 +12,24 @@ def flow(parameters, datapackage, resources, stats):
             if (row['Category'] == 'WT1'):
                 for k,v in default_dict[0].items():
                     row[k] = v
-            if (row['Category'] == 'WT2'):
+            elif (row['Category'] == 'WT2'):
                 for k,v in default_dict[1].items():
                     row[k] = v
-            if (row['Category'] == 'WT3'):
+            elif (row['Category'] == 'WT3'):
                 for k,v in default_dict[2].items():
                     row[k] = v
-            if (row['Category'] == 'WT4'):
+            elif (row['Category'] == 'WT4'):
                 for k,v in default_dict[3].items():
                     row[k] = v
-            if (row['Category'] == 'WT5'):
+            elif (row['Category'] == 'WT5'):
                 for k,v in default_dict[4].items():
                     row[k] = v
-            else:
+            elif (row['Category'] == 'WT6'):
                 for k,v in default_dict[5].items():
                     row[k] = v
+            else:
+                for k,v in default_dict[0].items():
+                    row[k] = 'undefinied'
         return step
 
     return Flow(
