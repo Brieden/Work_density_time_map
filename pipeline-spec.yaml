@@ -119,7 +119,7 @@ residential_diversity:
                  strokeWidth: 1.0
                  label: 'WT6'
                  primary: false
-              resources: ["data-layer", "mapbox-background"]
+            resources: ["data-layer", "mapbox-background"]
         sources:
           -
             url: "https://www.openstreetmap.org/copyright"

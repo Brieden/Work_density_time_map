@@ -1,6 +1,6 @@
 {
   "author": "Karolina Bzdusek <karolina@cividi.ch>",
-  "bytes": 434306,
+  "bytes": 438372,
   "contributors": [
     {
       "email": "info@cividi.ch",
@@ -21,7 +21,7 @@
     "topic": ""
   },
   "gemeindescan_version": "0.3.1",
-  "hash": "f0656e9af3d59d269afbe05cdd7aa5a2",
+  "hash": "6f5ab24c6cf3ef9941f91a1b4eafc1c4",
   "keywords": [
     "one keyword",
     "second keyword"
@@ -43,7 +43,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 434306,
+      "bytes": 438372,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -57,7 +57,7 @@
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "f5d22d23eb13f314ef145f12ba710be8",
+      "hash": "be997a2df1b6a5ebac81de188988a2be",
       "name": "clear_result",
       "path": "clear_result.csv",
       "profile": "tabular-data-resource",
@@ -183,6 +183,10 @@
   "views": [
     {
       "name": "mapview",
+      "resources": [
+        "data-layer",
+        "mapbox-background"
+      ],
       "spec": {
         "attribution": "",
         "bounds": [
@@ -257,10 +261,6 @@
             "strokeOpacity": 1.0,
             "strokeWidth": 1.0
           }
-        ],
-        "resources": [
-          "data-layer",
-          "mapbox-background"
         ],
         "title": "Residential Diversity Map"
       },
