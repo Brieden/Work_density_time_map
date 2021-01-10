@@ -2,7 +2,7 @@ import yaml
 import json
 import geopandas as gpd
 
-gdf = gpd.read_file('output/ZHR/clear_result.csv')
+gdf = gpd.read_file('output/ZHR/result.csv')
 gdf.to_file("output/ZHR/preview.geojson", driver='GeoJSON')
 # minx, miny, maxx, maxy = gdf.geometry.total_bounds
 # bbox = [minx, miny, maxx, maxy]

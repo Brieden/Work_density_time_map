@@ -1,36 +1,24 @@
-residential_diversity: 
+work_diversity: 
   properties:
-    title: Residential Diversity Map
-    description: Die Grosste Anzahl X-Zimmer Wohnung je Hektar (100m x 100m)
+    title: Work Diversity Map
+    description: Vielfalt und Bereiche von Industrie und Dienstleistungen je Hektar (100m x 100m)
     environment:
       DEBUG: true
   pipeline:
     - run: load
       parameters:
-        from: input/clear_result.csv
+        from: input/result.csv
         format: csv
         header: 10 
-    - run: add_computed_field
-      parameters:
-        fields:
-          -
-            operation: max
-            target: max_number
-            source:
-              - WT1
-              - WT2
-              - WT3
-              - WT4
-              - WT5
-              - WT6
-    - flow: flows.apartments
+    - flow: flows.calc_log_density
+    - flow: flows.calc_category
     - flow: flows.styling
     - run: update_package
       parameters:
-        name: residential-diversity-map 
-        author: Karolina Bzdusek <karolina@cividi.ch>
-        title: Residential Map
-        description: The Highest Number of X-bedroom Aparment per Hectar
+        name: work-diversity-map 
+        author: Sven Brieden <sven@cividi.ch>
+        title: Work Diversity Map
+        description: Diversity and areas of industry and services per hectare (100m x 100m)
         version: 1.0.0
         datapackage_version: 1.0.0
         gemeindescan_version: 0.3.1
@@ -54,11 +42,21 @@ residential_diversity:
             name: mapview
             specType: gemeindescanSnapshot
             spec:
-              title: Residential Diversity Map
-              description: The Highest Number of X-bedroom per Hectar
+              title: Work Diversity Map
+              description: Diversity and areas of industry and services per hectare
               attribution: ""
               bounds: ['geo:47.128114,8.332397', 'geo:47.492547,8.766038']
               legend: 
+                -
+                 shape: "circle"
+                 size: 0
+                 fillColor: "#52717e"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0
+                 label: 'Farben zeigen die Kategorie'
+                 primary: false 
                 -
                  shape: "circle"
                  size: 1
@@ -118,6 +116,36 @@ residential_diversity:
                  strokeOpacity: 1.0
                  strokeWidth: 1.0
                  label: 'WT6'
+                 primary: false
+                -
+                 shape: "circle"
+                 size: 0
+                 fillColor: "#05ff09"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0
+                 label: 'Die Größe zeigt die Vollzeitäquivalente Total'
+                 primary: false
+                -
+                 shape: "circle"
+                 size: 0.5
+                 fillColor: "#05ff09"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0
+                 label: '5 Arbeitsplätze'
+                 primary: false
+                -
+                 shape: "circle"
+                 size: 1.5
+                 fillColor: "#05ff09"
+                 fillOpacity: 0.18
+                 strokeColor: "#232323"
+                 strokeOpacity: 1.0
+                 strokeWidth: 1.0
+                 label: '300 Arbeitsplätze'
                  primary: false
             resources: ["data-layer", "mapbox-background"]
         sources:

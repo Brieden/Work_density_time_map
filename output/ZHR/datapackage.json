@@ -1,6 +1,6 @@
 {
-  "author": "Karolina Bzdusek <karolina@cividi.ch>",
-  "bytes": 438372,
+  "author": "Sven Brieden <sven@cividi.ch>",
+  "bytes": 1671831,
   "contributors": [
     {
       "email": "info@cividi.ch",
@@ -9,9 +9,9 @@
       "web": "https://cividi.ch"
     }
   ],
-  "count_of_rows": 4066,
+  "count_of_rows": 3685,
   "datapackage_version": "1.0.0",
-  "description": "The Highest Number of X-bedroom Aparment per Hectar",
+  "description": "Diversity and areas of industry and services per hectare (100m x 100m)",
   "feature": null,
   "format": "geojson",
   "gemeindescan_meta": {
@@ -21,7 +21,7 @@
     "topic": ""
   },
   "gemeindescan_version": "0.3.1",
-  "hash": "6f5ab24c6cf3ef9941f91a1b4eafc1c4",
+  "hash": "91bbf55e8b594a386b8b5f8d35790e04",
   "keywords": [
     "one keyword",
     "second keyword"
@@ -39,11 +39,11 @@
       "web": "None"
     }
   ],
-  "name": "residential-diversity-map",
+  "name": "work-diversity-map",
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 438372,
+      "bytes": 1671831,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -53,13 +53,13 @@
         "quoteChar": "\"",
         "skipInitialSpace": false
       },
-      "dpp:streamedFrom": "input/clear_result.csv",
+      "dpp:streamedFrom": "input/result.csv",
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "be997a2df1b6a5ebac81de188988a2be",
-      "name": "clear_result",
-      "path": "clear_result.csv",
+      "hash": "18834e1ef25f397cb7418d8cc61f76f7",
+      "name": "result",
+      "path": "result.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
@@ -84,39 +84,607 @@
             "type": "string"
           },
           {
+            "decimalChar": ".",
             "format": "default",
-            "name": "WT1",
+            "groupChar": "",
+            "name": "B08VZAT",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0801VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0802VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0803VZA",
+            "type": "number"
+          },
+          {
+            "format": "default",
+            "name": "B0805VZA",
             "type": "integer"
           },
           {
             "format": "default",
-            "name": "WT2",
+            "name": "B0806VZA",
             "type": "integer"
           },
           {
             "format": "default",
-            "name": "WT3",
+            "name": "B0807VZA",
             "type": "integer"
           },
           {
+            "decimalChar": ".",
             "format": "default",
-            "name": "WT4",
-            "type": "integer"
+            "groupChar": "",
+            "name": "B0808VZA",
+            "type": "number"
           },
           {
+            "decimalChar": ".",
             "format": "default",
-            "name": "WT5",
-            "type": "integer"
+            "groupChar": "",
+            "name": "B0809VZA",
+            "type": "number"
           },
           {
+            "decimalChar": ".",
             "format": "default",
-            "name": "WT6",
-            "type": "integer"
+            "groupChar": "",
+            "name": "B0810VZA",
+            "type": "number"
           },
           {
+            "decimalChar": ".",
             "format": "default",
-            "name": "max_number",
-            "type": "integer"
+            "groupChar": "",
+            "name": "B0811VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0812VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0813VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0814VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0815VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0816VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0817VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0818VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0819VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0820VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0821VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0822VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0823VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0824VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0825VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0826VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0827VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0828VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0829VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0830VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0831VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0832VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0833VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0835VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0836VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0837VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0838VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0839VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0841VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0842VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0843VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0845VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0846VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0847VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0849VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0850VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0851VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0852VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0853VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0855VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0856VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0858VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0859VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0860VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0861VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0862VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0863VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0864VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0865VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0866VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0868VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0869VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0870VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0871VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0872VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0873VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0874VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0875VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0877VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0878VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0879VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0880VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0881VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0882VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0884VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0885VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0886VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0887VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0888VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0890VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0891VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0892VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0893VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0894VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0895VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "B0896VZA",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "logVZAT",
+            "type": "number"
           },
           {
             "format": "default",
@@ -178,7 +746,7 @@
       "url": "https://www.openstreetmap.org/copyright"
     }
   ],
-  "title": "Residential Map",
+  "title": "Work Diversity Map",
   "version": "1.0.0",
   "views": [
     {
@@ -193,8 +761,19 @@
           "geo:47.128114,8.332397",
           "geo:47.492547,8.766038"
         ],
-        "description": "The Highest Number of X-bedroom per Hectar",
+        "description": "Diversity and areas of industry and services per hectare",
         "legend": [
+          {
+            "fillColor": "#52717e",
+            "fillOpacity": 0.18,
+            "label": "Farben zeigen die Kategorie",
+            "primary": false,
+            "shape": "circle",
+            "size": 0,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
           {
             "fillColor": "#52717e",
             "fillOpacity": 0.18,
@@ -260,9 +839,42 @@
             "strokeColor": "#232323",
             "strokeOpacity": 1.0,
             "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#05ff09",
+            "fillOpacity": 0.18,
+            "label": "Die Größe zeigt die Vollzeitäquivalente Total",
+            "primary": false,
+            "shape": "circle",
+            "size": 0,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#05ff09",
+            "fillOpacity": 0.18,
+            "label": "5 Arbeitsplätze",
+            "primary": false,
+            "shape": "circle",
+            "size": 0.5,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#05ff09",
+            "fillOpacity": 0.18,
+            "label": "300 Arbeitsplätze",
+            "primary": false,
+            "shape": "circle",
+            "size": 1.5,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
           }
         ],
-        "title": "Residential Diversity Map"
+        "title": "Work Diversity Map"
       },
       "specType": "gemeindescanSnapshot"
     }

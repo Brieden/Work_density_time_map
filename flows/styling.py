@@ -9,27 +9,14 @@ def flow(parameters, datapackage, resources, stats):
 
     def category():
         def step(row):
+            print(row)
             if (row['Category'] == 'WT1'):
                 for k,v in default_dict[0].items():
                     row[k] = v
-            elif (row['Category'] == 'WT2'):
+            if (row['Category'] == 'WT2'):
                 for k,v in default_dict[1].items():
                     row[k] = v
-            elif (row['Category'] == 'WT3'):
-                for k,v in default_dict[2].items():
-                    row[k] = v
-            elif (row['Category'] == 'WT4'):
-                for k,v in default_dict[3].items():
-                    row[k] = v
-            elif (row['Category'] == 'WT5'):
-                for k,v in default_dict[4].items():
-                    row[k] = v
-            elif (row['Category'] == 'WT6'):
-                for k,v in default_dict[5].items():
-                    row[k] = v
-            else:
-                for k,v in default_dict[0].items():
-                    row[k] = 'undefinied'
+            row['radius'] = float(row['logVZAT'])
         return step
 
     return Flow(
