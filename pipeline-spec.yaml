@@ -1,4 +1,4 @@
-work_diversity: 
+work_diversity:
   properties:
     title: Work Diversity Map
     description: Vielfalt und Bereiche von Industrie und Dienstleistungen je Hektar (100m x 100m)
@@ -9,13 +9,15 @@ work_diversity:
       parameters:
         from: input/result.csv
         format: csv
-        header: 10 
+        header: 10
+    - flow: flows.remap_categorys
     - flow: flows.calc_log_density
     - flow: flows.calc_category
     - flow: flows.styling
+    - flow: flows.clean_output
     - run: update_package
       parameters:
-        name: work-diversity-map 
+        name: work-diversity-map
         author: Sven Brieden <sven@cividi.ch>
         title: Work Diversity Map
         description: Diversity and areas of industry and services per hectare (100m x 100m)
@@ -31,147 +33,130 @@ work_diversity:
         feature:
         license: ODC-By-1.0
         licenses:
-          -
-            url: "https://opendatacommons.org/licenses/by/1.0/"
+          - url: "https://opendatacommons.org/licenses/by/1.0/"
             type: ODC-By-1.0
         keywords:
-          -  "one keyword"
-          -  "second keyword"
+          - "one keyword"
+          - "second keyword"
         views:
-          -
-            name: mapview
+          - name: mapview
             specType: gemeindescanSnapshot
             spec:
               title: Work Diversity Map
               description: Diversity and areas of industry and services per hectare
               attribution: ""
-              bounds: ['geo:47.128114,8.332397', 'geo:47.492547,8.766038']
-              legend: 
-                -
-                 shape: "circle"
-                 size: 0
-                 fillColor: "#52717e"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'Farben zeigen die Kategorie'
-                 primary: false 
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#52717e"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'WT1'
-                 primary: false 
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#f30000"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0 
-                 label: 'WT2'
-                 primary: false 
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#f97a00"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'WT3'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#ffff00"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'WT4'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#82ff05"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'WT5'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 1
-                 fillColor: "#05ff09"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'WT6'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 0
-                 fillColor: "#05ff09"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: 'Die Größe zeigt die Vollzeitäquivalente Total'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 0.5
-                 fillColor: "#05ff09"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: '5 Arbeitsplätze'
-                 primary: false
-                -
-                 shape: "circle"
-                 size: 1.5
-                 fillColor: "#05ff09"
-                 fillOpacity: 0.18
-                 strokeColor: "#232323"
-                 strokeOpacity: 1.0
-                 strokeWidth: 1.0
-                 label: '300 Arbeitsplätze'
-                 primary: false
+              bounds: ["geo:47.128114,8.332397", "geo:47.492547,8.766038"]
+              legend:
+                - shape: "circle"
+                  size: 0
+                  fillColor: "#52717e"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "Farben zeigen die Kategorie"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#52717e"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT1"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#f30000"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT2"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#f97a00"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT3"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#ffff00"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT4"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#82ff05"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT5"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#05ff09"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "WT6"
+                  primary: false
+                - shape: "circle"
+                  size: 0
+                  fillColor: "#05ff09"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "Die Größe zeigt die Vollzeitäquivalente Total"
+                  primary: false
+                - shape: "circle"
+                  size: 0.5
+                  fillColor: "#05ff09"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "5 Arbeitsplätze"
+                  primary: false
+                - shape: "circle"
+                  size: 1
+                  fillColor: "#05ff09"
+                  fillOpacity: 0.18
+                  strokeColor: "#232323"
+                  strokeOpacity: 1.0
+                  strokeWidth: 1.0
+                  label: "300 Arbeitsplätze"
+                  primary: false
             resources: ["data-layer", "mapbox-background"]
         sources:
-          -
-            url: "https://www.openstreetmap.org/copyright"
+          - url: "https://www.openstreetmap.org/copyright"
             title: "Karte: Mapbox, © OpenStreetMap"
         resources:
-          -
-            name: mapbox-background
+          - name: mapbox-background
             path: "mapbox://styles/gemeindescan/ck6rp249516tg1iqkmt48o4pz"
             mediatype: "application/vnd.mapbox-vector-tile"
             data:
-          -
-            name: "data-layer"
+          - name: "data-layer"
             mediatype: "application/geo+json"
             data:
-                name: "data"
-                type: "FeatureCollection"
-                features: 
+              name: "data"
+              type: "FeatureCollection"
+              features:
         maintainers:
-          -
-            web:  "None"
+          - web: "None"
             name: "None"
         contributors:
-          -
-            web: "https://cividi.ch"
+          - web: "https://cividi.ch"
             role: "publisher"
             email: "info@cividi.ch"
             title: "cividi"

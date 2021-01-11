@@ -5,18 +5,18 @@ import math
 
 default_dict = getting_dictionary('template/default_dict.txt')
 
-def flow(parameters, datapackage, resources, stats):
 
+def flow(parameters, datapackage, resources, stats):
     def category():
         def step(row):
-            print(row)
             if (row['Category'] == 'WT1'):
-                for k,v in default_dict[0].items():
+                for k, v in default_dict[0].items():
                     row[k] = v
             if (row['Category'] == 'WT2'):
-                for k,v in default_dict[1].items():
+                for k, v in default_dict[1].items():
                     row[k] = v
             row['radius'] = float(row['logVZAT'])
+
         return step
 
     return Flow(
@@ -29,4 +29,4 @@ def flow(parameters, datapackage, resources, stats):
         add_field('weight', 'string'),
         add_field('radius', 'number'),
         category(),
-        )
+    )
