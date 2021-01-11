@@ -1,7 +1,8 @@
-# Residential Diversity Map
+# Work Diversity Map
 
-Residentail density change map for a perimeter and year.  
+Can be visited [here](https://sandbox.gemeindescan.ch/de/GQRRJA/)
 
-Setup_Notebook contain how to setup pipelines, with detailed description on each step. 
+Work density change map for a perimeter and year.  
+
 
 _ _ _ _  _
