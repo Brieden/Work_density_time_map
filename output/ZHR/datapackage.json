@@ -1,6 +1,6 @@
 {
   "author": "Sven Brieden <sven@cividi.ch>",
-  "bytes": 1671831,
+  "bytes": 320172,
   "contributors": [
     {
       "email": "info@cividi.ch",
@@ -9,7 +9,7 @@
       "web": "https://cividi.ch"
     }
   ],
-  "count_of_rows": 3685,
+  "count_of_rows": 4072,
   "datapackage_version": "1.0.0",
   "description": "Diversity and areas of industry and services per hectare (100m x 100m)",
   "feature": null,
@@ -21,7 +21,7 @@
     "topic": ""
   },
   "gemeindescan_version": "0.3.1",
-  "hash": "91bbf55e8b594a386b8b5f8d35790e04",
+  "hash": "a741e110020f2e103518f38fbcd34f47",
   "keywords": [
     "one keyword",
     "second keyword"
@@ -43,7 +43,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 1671831,
+      "bytes": 320172,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -57,7 +57,7 @@
       "dpp:streaming": true,
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "18834e1ef25f397cb7418d8cc61f76f7",
+      "hash": "93d90afb944b93cc64074ad155ad9086",
       "name": "result",
       "path": "result.csv",
       "profile": "tabular-data-resource",
@@ -65,630 +65,7 @@
         "fields": [
           {
             "format": "default",
-            "name": "BTOT",
-            "type": "integer"
-          },
-          {
-            "format": "default",
-            "name": "yr",
-            "type": "integer"
-          },
-          {
-            "format": "default",
-            "name": "RELI",
-            "type": "integer"
-          },
-          {
-            "format": "default",
             "name": "wkt",
-            "type": "string"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B08VZAT",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0801VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0802VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0803VZA",
-            "type": "number"
-          },
-          {
-            "format": "default",
-            "name": "B0805VZA",
-            "type": "integer"
-          },
-          {
-            "format": "default",
-            "name": "B0806VZA",
-            "type": "integer"
-          },
-          {
-            "format": "default",
-            "name": "B0807VZA",
-            "type": "integer"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0808VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0809VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0810VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0811VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0812VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0813VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0814VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0815VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0816VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0817VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0818VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0819VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0820VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0821VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0822VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0823VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0824VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0825VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0826VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0827VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0828VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0829VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0830VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0831VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0832VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0833VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0835VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0836VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0837VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0838VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0839VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0841VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0842VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0843VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0845VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0846VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0847VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0849VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0850VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0851VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0852VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0853VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0855VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0856VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0858VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0859VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0860VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0861VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0862VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0863VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0864VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0865VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0866VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0868VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0869VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0870VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0871VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0872VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0873VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0874VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0875VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0877VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0878VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0879VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0880VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0881VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0882VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0884VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0885VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0886VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0887VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0888VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0890VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0891VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0892VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0893VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0894VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0895VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "B0896VZA",
-            "type": "number"
-          },
-          {
-            "decimalChar": ".",
-            "format": "default",
-            "groupChar": "",
-            "name": "logVZAT",
-            "type": "number"
-          },
-          {
-            "format": "default",
-            "name": "Category",
             "type": "string"
           },
           {
@@ -702,9 +79,11 @@
             "type": "string"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "fillOpacity",
-            "type": "string"
+            "type": "number"
           },
           {
             "format": "default",
@@ -758,15 +137,15 @@
       "spec": {
         "attribution": "",
         "bounds": [
-          "geo:47.128114,8.332397",
-          "geo:47.492547,8.766038"
+          "geo:47.34,8.51",
+          "geo:47.38,8.55"
         ],
         "description": "Diversity and areas of industry and services per hectare",
         "legend": [
           {
             "fillColor": "#52717e",
-            "fillOpacity": 0.18,
-            "label": "Farben zeigen die Kategorie",
+            "fillOpacity": 0,
+            "label": "---Farbe zeigt meistvertretenen Bereich---",
             "primary": false,
             "shape": "circle",
             "size": 0,
@@ -775,9 +154,9 @@
             "strokeWidth": 1.0
           },
           {
-            "fillColor": "#52717e",
-            "fillOpacity": 0.18,
-            "label": "WT1",
+            "fillColor": "#FF0000",
+            "fillOpacity": 1.0,
+            "label": "Industrie & produzierendes Gewerbe",
             "primary": false,
             "shape": "circle",
             "size": 1,
@@ -786,9 +165,9 @@
             "strokeWidth": 1.0
           },
           {
-            "fillColor": "#f30000",
-            "fillOpacity": 0.18,
-            "label": "WT2",
+            "fillColor": "#FE00B6",
+            "fillOpacity": 1.0,
+            "label": "Bildung & Forschung",
             "primary": false,
             "shape": "circle",
             "size": 1,
@@ -797,9 +176,9 @@
             "strokeWidth": 1.0
           },
           {
-            "fillColor": "#f97a00",
-            "fillOpacity": 0.18,
-            "label": "WT3",
+            "fillColor": "#60D4FE",
+            "fillOpacity": 1.0,
+            "label": "Publikumsorientierte Nutzungen",
             "primary": false,
             "shape": "circle",
             "size": 1,
@@ -808,9 +187,9 @@
             "strokeWidth": 1.0
           },
           {
-            "fillColor": "#ffff00",
-            "fillOpacity": 0.18,
-            "label": "WT4",
+            "fillColor": "#25629B",
+            "fillOpacity": 1.0,
+            "label": "Finanzdienstleistungen",
             "primary": false,
             "shape": "circle",
             "size": 1,
@@ -819,9 +198,31 @@
             "strokeWidth": 1.0
           },
           {
-            "fillColor": "#82ff05",
-            "fillOpacity": 0.18,
-            "label": "WT5",
+            "fillColor": "#7496A2",
+            "fillOpacity": 1.0,
+            "label": "Sonstige Dienstlestungen",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#A3FE23",
+            "fillOpacity": 1.0,
+            "label": "Freizeit, Gastronomie, Hotelerie",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#FEE960",
+            "fillOpacity": 1.0,
+            "label": "Gesundheit & Soziale Einrichtungen",
             "primary": false,
             "shape": "circle",
             "size": 1,
@@ -831,19 +232,8 @@
           },
           {
             "fillColor": "#05ff09",
-            "fillOpacity": 0.18,
-            "label": "WT6",
-            "primary": false,
-            "shape": "circle",
-            "size": 1,
-            "strokeColor": "#232323",
-            "strokeOpacity": 1.0,
-            "strokeWidth": 1.0
-          },
-          {
-            "fillColor": "#05ff09",
-            "fillOpacity": 0.18,
-            "label": "Die Größe zeigt die Vollzeitäquivalente Total",
+            "fillOpacity": 1.0,
+            "label": "---Die Größe zeigt Vollzeitäquivalente---",
             "primary": false,
             "shape": "circle",
             "size": 0,
@@ -853,7 +243,7 @@
           },
           {
             "fillColor": "#05ff09",
-            "fillOpacity": 0.18,
+            "fillOpacity": 0,
             "label": "5 Arbeitsplätze",
             "primary": false,
             "shape": "circle",
@@ -864,11 +254,44 @@
           },
           {
             "fillColor": "#05ff09",
-            "fillOpacity": 0.18,
+            "fillOpacity": 0,
             "label": "300 Arbeitsplätze",
             "primary": false,
             "shape": "circle",
-            "size": 1.5,
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#05ff09",
+            "fillOpacity": 1.0,
+            "label": "---Transparenz zeigt Diversität---",
+            "primary": false,
+            "shape": "circle",
+            "size": 0,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#E67D4A",
+            "fillOpacity": 0.1,
+            "label": "Geringe Diversität",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
+            "strokeColor": "#232323",
+            "strokeOpacity": 1.0,
+            "strokeWidth": 1.0
+          },
+          {
+            "fillColor": "#E67D4A",
+            "fillOpacity": 1.4,
+            "label": "Hohe Diversität",
+            "primary": false,
+            "shape": "circle",
+            "size": 1,
             "strokeColor": "#232323",
             "strokeOpacity": 1.0,
             "strokeWidth": 1.0

@@ -9,7 +9,7 @@ def flow(parameters, datapackage, resources, stats):
             'cividi_category':
             'Sonstige Dienstleistungen',
             'bfs_categorys':
-            [  #, 'B0844VZA', 'B0857VZA', 'B0876VZA', 'B0883VZA'
+            [  # no in DB: 'B0844VZA', 'B0857VZA', 'B0876VZA', 'B0883VZA'
                 'B0801VZA', 'B0802VZA', 'B0803VZA', 'B0835VZA', 'B0836VZA',
                 'B0837VZA', 'B0841VZA', 'B0842VZA', 'B0850VZA', 'B0851VZA',
                 'B0853VZA', 'B0858VZA', 'B0859VZA', 'B0860VZA', 'B0861VZA',
@@ -21,7 +21,7 @@ def flow(parameters, datapackage, resources, stats):
         {
             'cividi_category':
             'Industrie & produzierendes Gewerbe',
-            'bfs_categorys': [  #'B0804VZA','B0840VZA',
+            'bfs_categorys': [  # no in DB:'B0804VZA','B0840VZA',
                 'B0805VZA', 'B0806VZA', 'B0807VZA', 'B0808VZA', 'B0810VZA',
                 'B0811VZA', 'B0812VZA', 'B0813VZA', 'B0814VZA', 'B0815VZA',
                 'B0816VZA', 'B0817VZA', 'B0818VZA', 'B0819VZA', 'B0820VZA',
@@ -46,7 +46,7 @@ def flow(parameters, datapackage, resources, stats):
         {
             'cividi_category':
             'Freizeit, Gastronomie, Hotelerie',
-            'bfs_categorys': [  #'B0848VZA','B0854VZA','B0889VZA',
+            'bfs_categorys': [  # no in DB: 'B0848VZA', 'B0854VZA', 'B0889VZA',
                 'B0855VZA', 'B0886VZA', 'B0887VZA', 'B0888VZA', 'B0890VZA',
                 'B0892VZA'
             ]
@@ -62,6 +62,7 @@ def flow(parameters, datapackage, resources, stats):
     ]
 
     def calc_new_category_score():
+        """sum up the the values of bfs_categorys to store it in the representing cividi_category"""
         def step(row):
             for category in category_mapping_list:
                 row[category['cividi_category']] = 0
@@ -72,13 +73,14 @@ def flow(parameters, datapackage, resources, stats):
         return step
 
     def calc_biggest_category():
+        """find the biggest cividi_category per tile and store the name"""
         def step(row):
             biggest_category = {'name': '', 'VZA': 0}
             for category in category_mapping_list:
                 if row[category['cividi_category']] >= biggest_category['VZA']:
                     biggest_category['name'] = category['cividi_category']
                     biggest_category['VZA'] = row[category['cividi_category']]
-            row['biggest_category_name'] = biggest_category['name']
+            row['biggest_category'] = biggest_category['name']
 
         return step
 
@@ -90,5 +92,5 @@ def flow(parameters, datapackage, resources, stats):
                 add_field('Bildung & Forschung', 'number'),
                 add_field('Gesundheit & Soziale Einrichtungen', 'number'),
                 calc_new_category_score(),
-                add_field('biggest_category_name', 'string'),
+                add_field('biggest_category', 'string'),
                 calc_biggest_category())
