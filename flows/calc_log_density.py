@@ -6,12 +6,12 @@ def flow(parameters, datapackage, resources, stats):
     def log_density():
         def step(row):
             if float(row['B08VZAT']) > 1:
-                row['log_VZAT'] = math.log(float(row['B08VZAT'])) * 6
+                row['log_VZAT'] = math.log(float(row['B08VZAT']) / 10)
             else:
                 row['log_VZAT'] = 0
 
             # Limiting decimal points
-            row['log_VZAT'] = round(row['log_VZAT'], 2)
+            row['log_VZAT'] = round(row['log_VZAT'], 10)
 
         return step
 

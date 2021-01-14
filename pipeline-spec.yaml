@@ -1,6 +1,6 @@
-work_diversity:
+work_density:
   properties:
-    title: Work Diversity Map
+    title: Work Density Map
     description: Vielfalt und Bereiche von Industrie und Dienstleistungen je Hektar (100m x 100m)
     environment:
       DEBUG: true
@@ -10,17 +10,15 @@ work_diversity:
         from: input/result.csv
         format: csv
         header: 10
-    - flow: flows.remap_categorys
     - flow: flows.calc_log_density
-    - flow: flows.calc_diversity
     - flow: flows.styling
     - flow: flows.clean_output
     - run: update_package
       parameters:
-        name: work-diversity-map
+        name: work-density-map
         author: Sven Brieden <sven@cividi.ch>
-        title: Work Diversity Map
-        description: Diversity and areas of industry and services per hectare (100m x 100m)
+        title: Work Density Map
+        description: Density per hectare (100m x 100m)
         version: 1.0.0
         datapackage_version: 1.0.0
         gemeindescan_version: 0.3.1
@@ -42,83 +40,11 @@ work_diversity:
           - name: mapview
             specType: gemeindescanSnapshot
             spec:
-              title: Work Diversity Map
-              description: Diversity and areas of industry and services per hectare
+              title: Work Density Map
+              description: Density per hectare
               attribution: ""
               bounds: ["geo:47.34,8.51", "geo:47.38,8.55"]
               legend:
-                - shape: "circle"
-                  size: 0
-                  fillColor: "#52717e"
-                  fillOpacity: 0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "---Farbe zeigt meistvertretenen Bereich---"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#FF0000"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Industrie & produzierendes Gewerbe"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#FE00B6"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Bildung & Forschung"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#60D4FE"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Publikumsorientierte Nutzungen"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#25629B"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Finanzdienstleistungen"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#7496A2"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Sonstige Dienstlestungen"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#A3FE23"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Freizeit, Gastronomie, Hotelerie"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#FEE960"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Gesundheit & Soziale Einrichtungen"
-                  primary: false
                 - shape: "circle"
                   size: 0
                   fillColor: "#05ff09"
@@ -129,9 +55,9 @@ work_diversity:
                   label: "---Die Größe zeigt Vollzeitäquivalente---"
                   primary: false
                 - shape: "circle"
-                  size: 0.5
-                  fillColor: "#05ff09"
-                  fillOpacity: 0
+                  size: 0.2
+                  fillColor: "#000000"
+                  fillOpacity: 0.5
                   strokeColor: "#232323"
                   strokeOpacity: 1.0
                   strokeWidth: 1.0
@@ -139,39 +65,12 @@ work_diversity:
                   primary: false
                 - shape: "circle"
                   size: 1
-                  fillColor: "#05ff09"
-                  fillOpacity: 0
+                  fillColor: "#000000"
+                  fillOpacity: 0.5
                   strokeColor: "#232323"
                   strokeOpacity: 1.0
                   strokeWidth: 1.0
                   label: "300 Arbeitsplätze"
-                  primary: false
-                - shape: "circle"
-                  size: 0
-                  fillColor: "#05ff09"
-                  fillOpacity: 1.0
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "---Transparenz zeigt Diversität---"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#E67D4A"
-                  fillOpacity: 0.1
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Geringe Diversität"
-                  primary: false
-                - shape: "circle"
-                  size: 1
-                  fillColor: "#E67D4A"
-                  fillOpacity: 1.4
-                  strokeColor: "#232323"
-                  strokeOpacity: 1.0
-                  strokeWidth: 1.0
-                  label: "Hohe Diversität"
                   primary: false
             resources: ["data-layer", "mapbox-background"]
         sources:
