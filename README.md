@@ -1,6 +1,6 @@
-# Work Diversity Map
+# Work Density Map
 
-Can be visited [here](https://sandbox.gemeindescan.ch/de/GQRRJA/)
+Can be visited [here](https://sandbox.gemeindescan.ch/de/8UADYT/)
 
 Work diversity map for an area and year. It shows:
 
